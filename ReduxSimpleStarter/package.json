@@ -7,7 +7,10 @@
   "scripts": {
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
-    "test:watch": "npm run test -- --watch"
+    "test:watch": "npm run test -- --watch",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev":"node webpack.config.server.js --progress",
+    "build": "set NODE_ENV=production&& webpack -p --progress"
   },
   "author": "",
   "license": "ISC",
@@ -34,5 +37,4 @@
     "react-router": "^2.0.1",
     "redux": "^3.0.4",
     "youtube-api-search": "0.0.5"
-  }
-}
+  }}
